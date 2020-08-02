@@ -53,3 +53,6 @@ app.post('/create-checkout-session', async (req, res) => {
 
   res.json({ sessionId: session.id });
 });
+
+
+// testing
