@@ -6,7 +6,6 @@ This project is a simple e-commerce app with shopping cart functionality. It use
 ---------
 React | Redux | Node | Express
 
-**Demo**
 ---------
 ![Pizza Store Demo](client/public/pizza-store.gif)
 
