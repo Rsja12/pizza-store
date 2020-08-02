@@ -47,8 +47,8 @@ app.post('/create-checkout-session', async (req, res) => {
       allowed_countries: ['US'],
     },
     line_items: lineItems,
-    success_url: 'http://localhost:3000',
-    cancel_url: 'http://localhost:3000/cart'
+    success_url: 'https://damp-coast-52194.herokuapp.com/',
+    cancel_url: 'https://damp-coast-52194.herokuapp.com/cart'
   });
 
   res.json({ sessionId: session.id });
