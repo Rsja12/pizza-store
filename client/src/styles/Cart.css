@@ -1,0 +1,35 @@
+.cart-container {
+    width: 750px;
+    max-height: 380px;
+    margin: 2% auto;
+    overflow: auto;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+
+    padding: 2%;
+}
+
+.description, .content {
+    padding-bottom: 1.5%;
+    font-weight: 100;
+    padding-top: 1%;
+}
+
+.cart-msg {
+    text-align: center;
+    font-size: 18px;
+}
+
+.quantity {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.quantity-btn {
+	cursor: pointer;
+}
+
+.remove-btn {
+	cursor: pointer;
+}

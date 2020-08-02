@@ -1,0 +1,12 @@
+.success {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.success-text {
+    font-size: 100px;
+    font-variant: small-caps;
+    
+}

@@ -1,0 +1,19 @@
+.home {
+    background-image: url(../images/pizzaHomepage.jpeg);
+    height: 93vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    position: fixed;
+}
+
+.home-text {
+    font-size: xx-large;
+    position: relative;
+    margin-top: 25%;
+    margin-left: 75%;
+}
