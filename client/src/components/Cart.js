@@ -30,7 +30,6 @@ const Cart = ({ cart }) => {
                     </tbody>
                 </Table>
             )
-                // pizza => <CartList key={pizza.id} pizza={pizza}/>
         }
     }
 
