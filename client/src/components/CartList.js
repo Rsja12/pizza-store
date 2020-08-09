@@ -35,33 +35,6 @@ export default connect
         increaseQuantity,
         decreaseQuantity,
         removeFromCart 
-    })(CartList)
-
-
-    // <div className="item">
-    //             <div className="content">
-    //                 <div className="header">{name}</div>
-    //                 <div className="description">{description}</div>
-    //             <div className="right floated content">
-    //                 <button 
-    //                 onClick={ () => props.decreaseQuantity(props.pizza) }
-    //                 className="ui icon button">
-    //                     <i className='minus icon'></i>
-    //                 </button> 
-    //                 { quantity }
-    //                 <button 
-    //                 onClick={ () => props.increaseQuantity(props.pizza) }
-    //                 className="ui icon button">
-    //                     <i className='plus icon'></i>
-    //                 </button>
-    //                 <button 
-    //                     className='remove-button'
-    //                     onClick={() => props.removeFromCart(props.pizza)}
-    //                 >
-    //                     Remove Pizza
-    //                 </button>
-    //             </div>
-    //             </div>
-    //         </div>
+})(CartList)
 
 
