@@ -5,7 +5,7 @@ import CartTable from './CartTable'
 import Pricing from './Pricing'
 import '../styles/Cart.css'
 
-const Cart = ({ cart }) => {
+export const Cart = ({ cart }) => {
 
     const renderCart = () => {
         if ( cart.length === 0 ) {
