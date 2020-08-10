@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { increaseQuantity, decreaseQuantity, removeFromCart } from '../redux/actions'
 import '../styles/Cart.css'
 
-const CartList = props => {
+export const CartList = props => {
 
     const { name, quantity } = props.pizza 
     return (
@@ -12,11 +12,11 @@ const CartList = props => {
             <td className='font-weight-bold'>{name}</td>
             <td>
                 <span 
-                    className='quantity-btn'
+                    className='quantity-btn decrease'
                     onClick={() => props.decreaseQuantity(props.pizza)}>&#10134;</span>
                 <span className='quantity'>{quantity}</span>
                 <span 
-                    className='quantity-btn'
+                    className='quantity-btn increase'
                     onClick={() => props.increaseQuantity(props.pizza)}>&#10133;</span>
             </td>
             <td>
