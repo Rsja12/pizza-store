@@ -8,7 +8,7 @@ import CardDeck from 'react-bootstrap/CardDeck'
 import '../styles/Menu.css'
 import PizzaItem from '../components/PizzaItem'
 
-const Menu = props => {
+export const Menu = props => {
     const { menu } = props
     return (
             <Container>
