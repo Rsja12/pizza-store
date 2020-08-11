@@ -7,14 +7,11 @@ import '../styles/Cart.css'
 
 import StripeButton from './StripeButton'
 
-const Pricing = ({ cart }) => {
+export const Pricing = ({ cart }) => {
 
     const numOfItems = () => {
         if( cart.length === 0 ) {
             return null
-        } else if ( cart.length === 1 ) {
-            const [ pizza ] = cart
-            return pizza.quantity
         } else {
             const initValue = 0
             const items = cart.reduce( (acc, current) => {
