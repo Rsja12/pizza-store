@@ -7,7 +7,7 @@ import '../styles/Pricing.css'
 
 const stripePromise = loadStripe('pk_test_51H5yPuIOABoLmy2nqGUDyOvMUhsPvGDGkH3fTVMGPiaZF3AGoWQ69JtHaoMZ0YwHjrkSiki7sMhcrcmg0cNmyU1d00XN57Y0hk');
 
-const StripeButton = ({ cart }) => {
+export const StripeButton = ({ cart }) => {
     
     const handleClick = async () => {
         const response = await axios.post('create-checkout-session', { cart });
@@ -19,7 +19,7 @@ const StripeButton = ({ cart }) => {
     }
 
     return (
-        <Button variant='warning' onClick={handleClick}>Go To Checkout</Button>
+        <Button id='stripe-btn' variant='warning' onClick={handleClick}>Go To Checkout</Button>
     )
 }
 
