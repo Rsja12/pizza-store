@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renders with at least one item in cart 1`] = `ShallowWrapper {}`;
+
 exports[`renders with empty cart 1`] = `ShallowWrapper {}`;

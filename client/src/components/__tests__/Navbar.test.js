@@ -9,3 +9,9 @@ it ('renders with empty cart', () => {
 
     expect(shallow(<Navbar cart={mockCart} />)).toMatchSnapshot();
 });
+
+it ('renders with at least one item in cart', () => {
+    const mockCart = [{}];
+
+    expect(shallow(<Navbar cart={mockCart} />)).toMatchSnapshot();
+});
