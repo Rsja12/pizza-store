@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button'
 import { addToCart } from '../redux/actions'
 import '../styles/PizzaItem.css'
     
-const PizzaItem = ({ pizza, addToCart }) => {
+export const PizzaItem = ({ pizza, addToCart }) => {
     const { name, ingredients, image } = pizza
 
     return (
