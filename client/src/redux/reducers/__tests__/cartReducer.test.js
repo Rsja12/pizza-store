@@ -1,4 +1,4 @@
-import {cartReducer} from '../cartReducer';
+import { cartReducer } from '../cartReducer';
 
 describe('cart', () => {
 
@@ -20,6 +20,17 @@ describe('cart', () => {
             ...initialState,
             '1': {id: 1, name: 'pepperoni', quantity: 1}
         })
+    });
+
+    it ('handles REMOVE_FROM_CART', () => {
+        expect(cartReducer(initialState, {
+            type: 'REMOVE_FROM_CART',
+            payload: {
+                id: 1,
+                name: 'pepperoni'
+            }
+        }))
+        .toEqual({...initialState})
     });
 
 });
