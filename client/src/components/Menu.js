@@ -18,8 +18,8 @@ export const Menu = props => {
                     {
                         menu.map(pizza => {
                             return (
-                                <Col lg={4}>
-                                    <PizzaItem pizza={pizza} key={pizza.id} />
+                                <Col lg={4} key={pizza.id}>
+                                    <PizzaItem pizza={pizza} />
                                 </Col>
                             )
                         })
