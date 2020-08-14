@@ -11,22 +11,21 @@ import PizzaItem from '../components/PizzaItem'
 export const Menu = props => {
     const { menu } = props
     return (
-            <Container>
-                <Row>
-                    <CardDeck>
-
-                    {
-                        menu.map(pizza => {
-                            return (
-                                <Col lg={4} key={pizza.id}>
-                                    <PizzaItem pizza={pizza} />
-                                </Col>
-                            )
-                        })
-                    }
-                    </CardDeck>
-                </Row>
-            </Container>
+        <Container>
+            <Row>
+                <CardDeck>
+                {
+                    menu.map(pizza => {
+                        return (
+                            <Col lg={4} key={pizza.id}>
+                                <PizzaItem pizza={pizza} />
+                            </Col>
+                        )
+                    })
+                }
+                </CardDeck>
+            </Row>
+        </Container>
     )
 }
 
