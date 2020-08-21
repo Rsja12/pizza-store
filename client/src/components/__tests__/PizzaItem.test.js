@@ -26,3 +26,5 @@ it ('calls addToCart on button click', () => {
     wrapper.find('.hidden.mt-auto').simulate('click');
     expect(mockProps.addToCart).toHaveBeenCalledTimes(1);
 });
+
+// test
