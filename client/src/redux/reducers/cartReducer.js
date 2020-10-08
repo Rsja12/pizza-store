@@ -1,44 +1,41 @@
-import _ from 'lodash'
+import _ from 'lodash';
 
-export const cartReducer = ( state = {}, action ) => {
-    const pizza = action.payload
+export const cartReducer = (state = {}, action) => {
+    const pizza = action.payload;
 
-    switch( action.type ) {
-
+    switch (action.type) {
         case 'ADD_TO_CART':
-            pizza.quantity = pizza.quantity + 1 || 1
-            return { ...state, [pizza.id]: pizza }
+            pizza.quantity = pizza.quantity + 1 || 1;
+            return { ...state, [pizza.id]: pizza };
 
         case 'REMOVE_FROM_CART':
-            return _.omit(state, pizza.id) 
+            return _.omit(state, pizza.id);
 
         case 'INC_QTY':
             return {
                 ...state,
                 [pizza.id]: {
                     ...pizza,
-                    quantity: pizza.quantity + 1
-                }
-            }
+                    quantity: pizza.quantity + 1,
+                },
+            };
 
         case 'DEC_QTY':
-            if( pizza.quantity > 1 ) {
+            if (pizza.quantity > 1) {
                 return {
                     ...state,
                     [pizza.id]: {
                         ...pizza,
-                        quantity: pizza.quantity - 1
-                    }
-                } 
+                        quantity: pizza.quantity - 1,
+                    },
+                };
             }
-            return _.omit( state, pizza.id )
+            return _.omit(state, pizza.id);
 
         case 'PAYMENT_SUCCESS':
-            return {}
-            
-        default: 
-            return state 
+            return {};
+
+        default:
+            return state;
     }
-
-}   
-
+};

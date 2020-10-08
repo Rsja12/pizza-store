@@ -1,7 +1,7 @@
-import React from 'react'
-import Table from 'react-bootstrap/Table'
+import React from 'react';
+import Table from 'react-bootstrap/Table';
 
-import CartList from './CartList'
+import CartList from './CartList';
 
 const CartTable = ({ cart }) => {
     return (
@@ -14,14 +14,12 @@ const CartTable = ({ cart }) => {
                 </tr>
             </thead>
             <tbody>
-                {
-                    cart.map(pizza => (
-                        <CartList pizza={pizza} key={pizza.id} />
-                    ))
-                }
+                {cart.map((pizza) => (
+                    <CartList pizza={pizza} key={pizza.id} />
+                ))}
             </tbody>
         </Table>
-    )
-}
+    );
+};
 
-export default CartTable
+export default CartTable;
