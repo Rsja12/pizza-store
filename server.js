@@ -16,40 +16,40 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'client/build')));
+    app.use(express.static(path.join(__dirname, 'client/build')));
 
-  app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-  });
+    app.get('*', function (req, res) {
+        res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+    });
 }
 
-app.listen(port, error => {
-  if (error) throw error;
-  console.log('Server running on port ' + port);
+app.listen(port, (error) => {
+    if (error) throw error;
+    console.log('Server running on port ' + port);
 });
 
 app.post('/create-checkout-session', async (req, res) => {
-  const { cart } = req.body;
+    const { cart } = req.body;
 
-  const lineItems = cart.map(item => {
-    return {
-      name: item.name,
-      amount: 8.99 * 100,
-      quantity: item.quantity,
-      images: [item.imageUrl],
-      currency: 'usd'
-    }
-  })
+    const lineItems = cart.map((item) => {
+        return {
+            name: item.name,
+            amount: 8.99 * 100,
+            quantity: item.quantity,
+            images: [item.imageUrl],
+            currency: 'usd',
+        };
+    });
 
-  const session = await stripe.checkout.sessions.create({
-    payment_method_types: ['card'],
-    shipping_address_collection: {
-      allowed_countries: ['US'],
-    },
-    line_items: lineItems,
-    success_url: 'https://damp-coast-52194.herokuapp.com/',
-    cancel_url: 'https://damp-coast-52194.herokuapp.com/cart'
-  });
+    const session = await stripe.checkout.sessions.create({
+        payment_method_types: ['card'],
+        shipping_address_collection: {
+            allowed_countries: ['US'],
+        },
+        line_items: lineItems,
+        success_url: 'https://damp-coast-52194.herokuapp.com/',
+        cancel_url: 'https://damp-coast-52194.herokuapp.com/cart',
+    });
 
-  res.json({ sessionId: session.id });
+    res.json({ sessionId: session.id });
 });
